@@ -1,0 +1,49 @@
+<h1 class="page-title">Daftar Barang & Inventaris</h1>
+<p class="page-sub">Cari barang yang kamu butuhkan dan cek ketersediaannya.</p>
+
+<div class="card">
+    <div class="filters">
+        <div class="field">
+            <label for="cari">Cari Barang</label>
+            <input type="search" id="cari" placeholder="Ketik nama atau kode barang...">
+        </div>
+        <div class="field">
+            <label for="fKategori">Kategori</label>
+            <select id="fKategori">
+                <option value="">Semua Kategori</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="fStatus">Status</label>
+            <select id="fStatus">
+                <option value="">Semua Status</option>
+                <option value="Tersedia">Tersedia</option>
+                <option value="Terbatas">Terbatas</option>
+                <option value="Habis">Habis</option>
+            </select>
+        </div>
+        <button type="button" id="btnReset" class="btn btn-light">Reset</button>
+    </div>
+</div>
+
+<p id="hasilInfo" class="muted"></p>
+<div class="grid" id="gridBarang"></div>
+
+<div class="card">
+    <h2>Simulasi Cek Ketersediaan</h2>
+    <div class="sim-fields">
+        <div class="field">
+            <label for="simBarang">Pilih Barang</label>
+            <select id="simBarang"></select>
+        </div>
+        <div class="field">
+            <label for="simJumlah">Jumlah Unit</label>
+            <input type="number" id="simJumlah" value="1" min="1">
+        </div>
+        <div class="field">
+            <label for="simHari">Lama Pinjam (Hari)</label>
+            <input type="number" id="simHari" value="1" min="1" max="7">
+        </div>
+    </div>
+    <div id="simHasil" class="sim-result"></div>
+</div>

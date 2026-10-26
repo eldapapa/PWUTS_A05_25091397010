@@ -1,0 +1,105 @@
+<h1 class="page-title">Formulir Peminjaman Barang</h1>
+<p class="page-sub">Isi data di bawah ini secara lengkap dan benar.</p>
+
+<div id="alertBox"></div>
+
+<div class="card">
+    <form id="formPinjam" novalidate>
+        <div class="form-grid">
+            <div class="field">
+                <label for="nim">NIM / NIP <span class="req">*</span></label>
+                <input type="text" id="nim" placeholder="Contoh: 23091397010">
+                <span class="error" data-for="nim"></span>
+            </div>
+
+            <div class="field">
+                <label for="nama">Nama Lengkap <span class="req">*</span></label>
+                <input type="text" id="nama" placeholder="Nama lengkap sesuai KTM">
+                <span class="error" data-for="nama"></span>
+            </div>
+
+            <div class="field">
+                <label for="prodi">Program Studi <span class="req">*</span></label>
+                <select id="prodi">
+                    <option value="">-- Pilih Prodi --</option>
+                </select>
+                <span class="error" data-for="prodi"></span>
+            </div>
+
+            <div class="field">
+                <label for="hp">No. WhatsApp / HP <span class="req">*</span></label>
+                <input type="tel" id="hp" placeholder="Contoh: 081234567890">
+                <span class="error" data-for="hp"></span>
+            </div>
+
+            <div class="field">
+                <label for="barang">Barang yang Dipinjam <span class="req">*</span></label>
+                <select id="barang">
+                    <option value="">-- Pilih Barang --</option>
+                </select>
+                <span id="stokInfo" class="hint"></span>
+                <span class="error" data-for="barang"></span>
+            </div>
+
+            <div class="field">
+                <label for="jumlah">Jumlah Unit <span class="req">*</span></label>
+                <input type="number" id="jumlah" min="1" placeholder="1">
+                <span class="error" data-for="jumlah"></span>
+            </div>
+
+            <div class="field">
+                <label for="tglPinjam">Tanggal Pinjam <span class="req">*</span></label>
+                <input type="date" id="tglPinjam">
+                <span class="error" data-for="tglPinjam"></span>
+            </div>
+
+            <div class="field">
+                <label for="tglKembali">Tanggal Kembali <span class="req">*</span></label>
+                <input type="date" id="tglKembali">
+                <span class="error" data-for="tglKembali"></span>
+            </div>
+
+            <div class="field field-full">
+                <label for="keperluan">Keperluan Peminjaman <span class="req">*</span></label>
+                <textarea id="keperluan" rows="3" placeholder="Jelaskan tujuan peminjaman barang ini..."></textarea>
+                <span class="hint"><span id="hitungKarakter">0</span>/minimal 10 karakter</span>
+                <span class="error" data-for="keperluan"></span>
+            </div>
+
+            <div class="field field-full">
+                <label class="check">
+                    <input type="checkbox" id="setuju">
+                    <span>Saya berjanji akan merawat barang dan mengembalikannya tepat waktu.</span>
+                </label>
+                <span class="error" data-for="setuju"></span>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Kirim Pengajuan</button>
+            <button type="reset" id="btnKosongkan" class="btn btn-light">Kosongkan Form</button>
+        </div>
+    </form>
+</div>
+
+<div class="card">
+    <div class="card-head">
+        <h2>Riwayat Pengajuan Simulasi</h2>
+        <button type="button" id="btnHapusRiwayat" class="btn btn-light btn-sm">Hapus Riwayat</button>
+    </div>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Peminjam</th>
+                    <th>Barang</th>
+                    <th>Jml</th>
+                    <th>Periode</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="riwayatBody"></tbody>
+        </table>
+    </div>
+</div>

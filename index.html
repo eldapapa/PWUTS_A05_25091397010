@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPEBAR - Fakultas Vokasi</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Memuat Library jQuery yang dibutuhkan app.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#beranda" class="brand">
+                <div class="brand-logo">SP</div>
+                <div class="brand-text">
+                    <strong>SIPEBAR</strong>
+                    <small>Fakultas Vokasi</small>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <a href="#beranda" data-page="beranda" class="active">Beranda</a>
+                <a href="#inventaris" data-page="inventaris">Daftar Barang</a>
+                <a href="#form" data-page="form">Form Peminjaman</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="content">
+        <!-- Konten Ajax akan dimuat di sini -->
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 SIPEBAR Fakultas Vokasi</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="konten.js"></script>
+    <script src="form.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
